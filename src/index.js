@@ -6,8 +6,9 @@ const bannerR = require('./routers/banner');
 app.use(express.json());
 app.use(productR);
 app.use(bannerR);
-
- 
-app.listen(3001, () => {
+//puerto
+const port=process.env.PORT || 3001
+//
+app.listen(port, () => {
   console.log('Escuchando puerto 3001');
 })
